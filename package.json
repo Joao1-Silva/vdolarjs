@@ -1,0 +1,33 @@
+{
+  "name": "vdolarjs",
+  "version": "1.0.0",
+  "description": "Consult dolar veneco",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joao1-Silva/vdolarjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joao1-Silva/vdolarjs/issues"
+  },
+  "homepage": "https://github.com/Joao1-Silva/vdolarjs#readme",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "cheerio": "^1.0.0-rc.12",
+    "consulta-dolar-venezuela": "^1.0.7",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
