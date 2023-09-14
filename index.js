@@ -24,7 +24,7 @@ app.get('/home', (req, res) => {
   res.status(200).json('Welcome, your app is working well');
 })
 
-app.get('/dolarbcv', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
       const price = await consultaDolar.getMonitor("BCV", "price");
       const lastUpdate = await consultaDolar.getMonitor("BCV", "lastUpdate");
