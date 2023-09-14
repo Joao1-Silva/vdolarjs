@@ -34,3 +34,5 @@ app.get('/dolarbcv', async (req, res) => {
       res.status(500).send('Error interno del servidor');
     }
   })
+
+module.exports = app
