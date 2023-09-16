@@ -20,11 +20,11 @@ app.listen(port, ()=> {
 let price = consultaDolar.getMonitor("BCV", "price");
 let lastUpdate = consultaDolar.getMonitor("BCV", "lastUpdate");
 
-app.get('/home', (req, res) => {
-  res.status(200).json('Welcome, your app is working well');
+app.get('/', (req, res) => {
+  res.status(200).json('Welcome, your api is working well');
 })
 
-app.get('/', async (req, res) => {
+app.get('/dolarbcv', async (req, res) => {
     try {
       const price = await consultaDolar.getMonitor("BCV", "price");
       const lastUpdate = await consultaDolar.getMonitor("BCV", "lastUpdate");
