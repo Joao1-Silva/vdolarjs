@@ -17,20 +17,38 @@ app.listen(port, ()=> {
 
 // consultaDolar.getMonitor("BCV", "lastUpdate").then($ =>{console.log($)});
 
-let price = consultaDolar.getMonitor("BCV", "price");
-let lastUpdate = consultaDolar.getMonitor("BCV", "lastUpdate");
-
 app.get('/', (req, res) => {
-  res.status(200).json('Welcome, Im API` Jonathan');
+  res.status(200).json('Welcome, Im API`s Jonathan');
 })
 
 app.get('/dolarbcv', async (req, res) => {
     try {
       const price = await consultaDolar.getMonitor("BCV", "price");
       const lastUpdate = await consultaDolar.getMonitor("BCV", "lastUpdate");
-      res.json({ priceBCV: price, lastUpdate });
+      res.json([{ priceBCV: price, lastUpdated: lastUpdate }]);
     } catch (error) {
       console.error('Error:', error);
       res.status(500).send('Error interno del servidor');
     }
   })
+
+app.get('/dolarparalelo', async (req, res) => {
+  try {
+    const price = await consultaDolar.getMonitor("EnParaleloVzla", "price");
+    const lastUpdate = await consultaDolar.getMonitor("EnParaleloVzla", "lastUpdate");
+    res.json({ pricePar: price, lastUpdated: lastUpdate });
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).send('Error interno del servidor');
+  }
+})
+
+app.get('/dolar', async (req, res) => {
+  try {
+    const price = await consultaDolar.getMonitor("null");
+    res.json({ price: price });
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).send('Error interno del servidor');
+  }
+})
