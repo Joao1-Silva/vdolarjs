@@ -21,7 +21,7 @@ let price = consultaDolar.getMonitor("BCV", "price");
 let lastUpdate = consultaDolar.getMonitor("BCV", "lastUpdate");
 
 app.get('/', (req, res) => {
-  res.status(200).json('Welcome, your api is working well');
+  res.status(200).json('Welcome, Im API` Jonathan');
 })
 
 app.get('/dolarbcv', async (req, res) => {
