@@ -16,23 +16,15 @@
         }
       },
       {
-        "src": "/dolarbcv",
-        "dest": "/index.js",
-        "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-        "headers": {
-          "Access-Control-Allow-Origin": "*"
-        }
-      },
-      {
-        "src": "/dolarparalelo",
-        "dest": "/index.js",
-        "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-        "headers": {
-          "Access-Control-Allow-Origin": "*"
-        }
-      },
-      {
         "src": "/dolar",
+        "dest": "/index.js",
+        "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+        "headers": {
+          "Access-Control-Allow-Origin": "*"
+        }
+      },
+      {
+        "src": "/dolartest",
         "dest": "/index.js",
         "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
         "headers": {
