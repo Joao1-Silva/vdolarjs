@@ -1,0 +1,74 @@
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #3498DB;
+    --accent-color: #E74C3C;
+    --background-color: #ECF0F1;
+    --text-color: #2C3E50;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.usage-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.usage-card:hover {
+    transform: translateY(-2px);
+}
+
+.usage-card h3 {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.usage-card .time {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.usage-card .data {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .usage-card {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+input[type="number"] {
+    transition: border-color 0.2s ease-in-out;
+}
+
+input[type="number"]:focus {
+    border-color: var(--secondary-color);
+}
