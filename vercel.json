@@ -4,27 +4,36 @@
     {
       "src": "index.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/dolar",
-      "dest": "index.js"
+      "dest": "/index.js"
     },
     {
-      "src": "/styles.css",
-      "dest": "public/styles.css"
+      "src": "/styles\\.css",
+      "dest": "/public/styles.css",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/css"
+      }
     },
     {
-      "src": "/app.js",
-      "dest": "public/app.js"
-    },
-    {
-      "handle": "filesystem"
+      "src": "/app\\.js",
+      "dest": "/public/app.js",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "application/javascript"
+      }
     },
     {
       "src": "/(.*)",
-      "dest": "index.js"
+      "dest": "/index.js"
     }
   ]
 }
