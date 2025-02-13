@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #2C3E50;
-    --secondary-color: #3498DB;
-    --accent-color: #E74C3C;
-    --background-color: #ECF0F1;
-    --text-color: #2C3E50;
+    --primary-color: #2E7D32;  /* Dark green */
+    --secondary-color: #4CAF50;  /* Medium green */
+    --accent-color: #81C784;  /* Light green */
+    --background-color: #F1F8E9;  /* Very light green background */
+    --text-color: #1B5E20;  /* Darker green for text */
 }
 
 body {

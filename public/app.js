@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const hours = gigabytes / data.dataPerHour;
                 const timeElement = document.getElementById(`${service}Time`);
                 const dataElement = document.getElementById(`${service}Data`);
-                
+
                 if (timeElement && dataElement) {
                     timeElement.textContent = formatDuration(hours);
                     dataElement.textContent = `${gigabytes.toFixed(2)} GB`;
