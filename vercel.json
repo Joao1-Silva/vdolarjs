@@ -4,59 +4,27 @@
     {
       "src": "index.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "public/**",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/index.js"
-    },
-    {
       "src": "/dolar",
-      "dest": "/index.js"
+      "dest": "index.js"
     },
     {
-      "src": "/(.*)\\.js",
-      "dest": "/public/$1.js"
+      "src": "/styles.css",
+      "dest": "public/styles.css"
     },
     {
-      "src": "/(.*)\\.css",
-      "dest": "/public/$1.css"
+      "src": "/app.js",
+      "dest": "public/app.js"
     },
     {
-      "src": "/(.*)\\.html",
-      "dest": "/public/$1.html"
-    },
-    {
-      "src": "/",
-      "dest": "/public/index.html"
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "/public/$1"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "GET, POST, PUT, DELETE, PATCH, OPTIONS"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "X-Requested-With, Content-Type, Accept"
-        }
-      ]
+      "dest": "index.js"
     }
   ]
 }
