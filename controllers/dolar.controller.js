@@ -52,9 +52,9 @@ const dolar = async (req, res) => {
                 color: priceData.color || 'black'
             },
             internetUsage: {
-                youtubeHD: {
+                youtubeTiktok: {
                     dataPerHour: 1.5,
-                    description: "YouTube HD Streaming"
+                    description: "YouTube - TikTok"
                 },
                 netflixHD: {
                     dataPerHour: 3,

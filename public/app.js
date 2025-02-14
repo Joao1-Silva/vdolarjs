@@ -8,12 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Format date to local string
     const formatDate = (dateString) => {
         try {
-            return new Date(dateString).toLocaleString('es-VE', {
+            const date = new Date(dateString);
+            if (isNaN(date.getTime())) {
+                throw new Error('Invalid date');
+            }
+            return date.toLocaleString('es-VE', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric',
                 hour: '2-digit',
-                minute: '2-digit'
+                minute: '2-digit',
+                timeZone: 'America/Caracas'
             });
         } catch (error) {
             console.error('Error formatting date:', error);
